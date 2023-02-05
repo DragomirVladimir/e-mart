@@ -1,0 +1,32 @@
+body {
+  background-color: #F3F3F3;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 0.045em;
+  color: #335E74;
+  font-family: 'Mukta', sans-serif;
+  // font-family: 'Dancing Script', cursive;
+  // font-family: 'Dosis', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

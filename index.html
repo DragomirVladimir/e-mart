@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Greenery | Home page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Dosis:wght@600;800&family=Mukta&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -14,22 +19,57 @@
   <header class="header">
     <div class="container">
       <div class="header__inner">
-        <div class="header__inner-item">
-          <a class="header__link" href="#">
+        <div class="header__item">
+          <a class="header__link header__link--login" href="#">
+            <svg class="header__link-icon header__link-icon--login" width="18" height="17" viewBox="0 0 18 17"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15.5803 12.0326L11.6852 11.0024C11.6743 10.999 11.6635 10.9973 11.6523 10.9955C11.6449 10.9939 11.6341 10.9838 11.6341 10.9648V9.54863L12.0196 9.19853C12.478 8.78207 12.7583 8.23112 12.8093 7.6447L12.8292 7.41354C12.8366 7.33193 12.8418 7.2468 12.8492 7.15694C13.2531 7.00915 13.5825 6.62141 13.7007 6.11997C13.7972 5.71194 13.7336 5.30726 13.5261 5.00816C13.386 4.80583 13.184 4.66481 12.9548 4.60865C12.964 4.01886 12.9674 3.18069 12.9674 2.81178C12.9674 1.26148 11.5738 0 9.85995 0H9.78897C8.95557 0 8.13695 0.256599 7.482 0.72245C7.33818 0.824495 7.17278 0.882285 7.00896 0.87714C5.94819 0.87714 5.0787 1.66074 5.07133 2.62301C5.06959 2.76065 5.06959 2.90871 5.06959 3.06666C5.06959 3.32002 5.07133 4.01186 5.07697 4.50827C4.83495 4.55767 4.62217 4.70045 4.4749 4.91294C4.26749 5.21204 4.20202 5.61682 4.29849 6.02475C4.41667 6.52792 4.75878 6.92244 5.16619 7.06862C5.17879 7.26743 5.19342 7.45285 5.20805 7.62445L5.21167 7.64475C5.26077 8.23132 5.54088 8.78213 5.99754 9.19695L6.365 9.5353V10.965C6.365 10.9821 6.3524 10.9938 6.34327 10.9957C6.33241 10.9974 6.32155 10.9991 6.31242 11.0026L2.41921 12.0328C1.01676 12.3065 0 13.4811 0 14.831V16.3337C0 16.7009 0.320089 17 0.713015 17H17.287C17.6799 17 18 16.7009 18 16.3337V14.831C18.0001 13.4811 16.9834 12.3065 15.5805 12.0327L15.5803 12.0326Z"
+                fill="white" />
+            </svg>
+
             Login
           </a>
-          <a class="header__link" href="#">
+          <a class="header__link header__link--singin" href="#">
+            <svg class="header__link-icon header__link-icon--singin" width="15" height="17" viewBox="0 0 15 17"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0 10.2892H3.99648V11.1556L3.997 11.1749L4.00048 11.231L4.00279 11.2497L4.00511 11.2678L4.00743 11.2866L4.01026 11.3046L4.01309 11.3234L4.01657 11.3414L4.02056 11.3595L4.02224 11.368L4.02455 11.3771L4.02687 11.3856L4.02919 11.3952L4.03151 11.4037L4.03382 11.4133L4.03614 11.4213L4.04129 11.4393L4.04709 11.4563L4.05288 11.4739L4.05919 11.4915L4.07181 11.5254L4.07928 11.5423L4.08623 11.5593L4.0937 11.5757L4.10992 11.6086L4.11855 11.625L4.12718 11.6408L4.14572 11.6725L4.15499 11.6878L4.16478 11.7031L4.18564 11.7337L4.19607 11.7484L4.21796 11.7777L4.24113 11.806L4.25324 11.8197L4.25955 11.8277L4.26534 11.8334L4.27229 11.8413L4.27745 11.847L4.2844 11.855L4.29766 11.868L4.31041 11.881L4.32367 11.8941L4.36539 11.9316L4.37981 11.9435L4.39423 11.9549L4.40981 11.9674C4.46286 12.0083 4.52004 12.044 4.5812 12.0746C4.59446 12.0814 4.60772 12.0876 4.62098 12.0938C5.00174 12.2654 5.44932 12.2044 5.76722 11.9363L8.91575 9.28552C9.15345 9.08554 9.29018 8.79362 9.29018 8.486C9.29018 8.17826 9.15344 7.88595 8.91575 7.68583L5.76722 5.03503C5.69344 4.97267 5.61206 4.9217 5.52669 4.88198L5.51111 4.87515L5.49501 4.86832L5.48806 4.8649L5.47312 4.85921L5.45754 4.85301L5.44145 4.84682L5.43398 4.84454L5.4184 4.83885L5.40346 4.83379L5.36999 4.82367L5.36303 4.82202L5.34745 4.81747L5.33136 4.81355L5.31462 4.80963L5.30766 4.80799L5.29092 4.80457L5.27483 4.80116L5.25809 4.79837L5.24084 4.79559L5.23453 4.79445L5.21663 4.79167L5.20105 4.79002L5.18431 4.78775L5.17735 4.78724L5.16062 4.7856L5.14388 4.78446L5.12662 4.78332L5.10937 4.78281H5.10306L5.0858 4.78231H5.04602L5.02876 4.78281L5.01151 4.78395L4.99425 4.78446L4.977 4.7861L4.97121 4.78661L4.95395 4.78825L4.93721 4.7899L4.91996 4.79217L4.90154 4.79496L4.89639 4.79546L4.87734 4.79888L4.8624 4.80166L4.84515 4.80508L4.83935 4.80621L4.80587 4.81406L4.78862 4.81861L4.77137 4.82367L4.76621 4.82481L4.74832 4.8305L4.73274 4.83505L4.71548 4.84074L4.71033 4.84302L4.69359 4.84871L4.67685 4.85491L4.66076 4.86174L4.6435 4.86857L4.63835 4.87085L4.62226 4.87819C4.61415 4.8816 4.60616 4.88552 4.59805 4.88957C4.58878 4.89412 4.57899 4.89868 4.56972 4.90374L4.55247 4.91284C4.53573 4.92195 4.51899 4.93156 4.50289 4.94168L4.48615 4.95193C4.2894 5.07778 4.14119 5.26245 4.06277 5.47559L4.05994 5.48293C4.05762 5.48913 4.05595 5.49482 4.05363 5.50102L4.05015 5.51126C4.03972 5.54301 4.0311 5.57476 4.02363 5.60765C4.02131 5.61789 4.01899 5.62801 4.01732 5.63876C4.00521 5.69998 3.99891 5.76285 3.99826 5.82685V6.68304H0.00177829V0.550732L0.00229334 0.537704L0.00345221 0.523031L0.00396727 0.517339C0.0137534 0.403501 0.0581756 0.299147 0.126809 0.214778L0.133118 0.206303L0.160931 0.175567L0.181662 0.155202L0.190933 0.147234L0.211792 0.129019L0.219905 0.122821C0.305919 0.055404 0.412536 0.0117642 0.529065 0.0021503L0.534216 0.00164435L0.549152 0.000505952L0.563573 0H0.57851H12.5218C13.1789 0 13.8093 0.256645 14.2743 0.712899C14.7386 1.16963 15 1.78905 15 2.4344V14.5656C15 15.2111 14.7387 15.8304 14.2743 16.2871C13.8093 16.7432 13.1788 17 12.5218 17H0.561698L0.548951 16.9995L0.534014 16.9984L0.528864 16.9979C0.412332 16.9882 0.30559 16.9446 0.219703 16.8772L0.211592 16.871L0.190732 16.8528L0.180946 16.8443L0.158413 16.8222L0.151459 16.8142L0.132917 16.7937L0.126608 16.7852C0.057978 16.7007 0.0135534 16.5965 0.00376658 16.4827L0.00325127 16.477L0.0020924 16.4623L0.00157735 16.4481V10.2896L0 10.2892ZM5.68948 1.13282L9.50533 1.98966C10.5252 2.2186 11.2487 3.10997 11.2487 4.13794V12.861C11.2487 13.889 10.5253 14.7804 9.50533 15.0093L5.68948 15.8662H12.5202C12.8714 15.8662 13.2084 15.729 13.457 15.4853C13.705 15.241 13.8448 14.9101 13.8448 14.565V2.43376C13.8448 2.08871 13.7052 1.75768 13.457 1.51343C13.2084 1.26981 12.8716 1.13256 12.5202 1.13256H5.68948V1.13282Z"
+                fill="white" />
+            </svg>
+
             Sing Up
           </a>
         </div>
-        <div class="header__inner-item">
-          <a class="header__link" href="#">
+        <div class="header__item">
+          <a class="header__link header__link--mail" href="#">
+            <svg class="header__link-icon header__link-icon--mail" width="22" height="16" viewBox="0 0 22 16"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.60967 0C1.4025 0 1.20431 0.0440005 1.02277 0.124916L10.4553 9.29825C10.7956 9.62857 11.2228 9.62836 11.5621 9.29825L20.9775 0.124916C20.7959 0.0439961 20.5977 0 20.3906 0H1.60967ZM0.0166563 1.57691C0.00561441 1.66405 0 1.75549 0 1.84606V14.1541C0 14.4129 0.0426698 14.6617 0.125764 14.8849L6.67413 8.0386L0.0166563 1.57691ZM21.9835 1.57691L15.3431 8.02929L21.8742 14.885C21.9573 14.6618 22 14.413 22 14.1541V1.8461C22 1.75531 21.994 1.66408 21.9833 1.57694L21.9835 1.57691ZM14.1109 9.23097L12.6017 10.7021C11.6865 11.5926 10.3307 11.5909 9.41567 10.7021L7.91494 9.24037L1.45904 15.9906C1.50807 15.9955 1.55973 16 1.60988 16H20.3907C20.4436 16 20.4983 15.9959 20.5499 15.9906L14.1109 9.23097Z"
+                fill="white" />
+            </svg>
+
             Mailing list
           </a>
-          <a class="header__link" href="#">
+          <a class="header__link header__link--share" href="#">
+            <svg class="header__link-icon header__link-icon" width="14" height="18" viewBox="0 0 14 18" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.4074 0C9.9816 0 8.81481 1.22743 8.81481 2.72729C8.81481 3.16656 8.92096 3.58605 9.09837 3.95453L4.51275 7.17605C4.03748 6.62377 3.35212 6.27258 2.59255 6.27258C1.16679 6.27258 0 7.50001 0 8.99988C0 10.4997 1.16679 11.7272 2.59255 11.7272C3.353 11.7272 4.03729 11.3773 4.51275 10.8237L9.09837 14.0369C8.91698 14.4088 8.81481 14.8281 8.81481 15.2727C8.81481 16.7726 9.9816 18 11.4074 18C12.8331 18 13.9999 16.7726 13.9999 15.2727C13.9999 13.7728 12.8331 12.5454 11.4074 12.5454C10.7836 12.5454 10.2113 12.7863 9.7628 13.176L5.0476 9.87763C5.13712 9.60216 5.1854 9.30616 5.1854 8.99988C5.1854 8.69092 5.13875 8.39968 5.0476 8.12213L9.7466 4.81538C10.1976 5.21432 10.7756 5.45459 11.4075 5.45459C12.8332 5.45459 14 4.22716 14 2.72729C14 1.22743 12.8332 0 11.4075 0H11.4074Z"
+                fill="white" />
+            </svg>
+
             Share
           </a>
-          <a class="header__link" href="#">
+          <a class="header__link header__link--cart" href="#">
+            <svg class="header__link-icon header__link-icon" width="21" height="16" viewBox="0 0 21 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0 0H3.48334L4.85832 3.64907L8.06667 12.1637H18.3332V12.7251C18.7915 13.0993 19.0664 13.5672 19.0664 14.2222C19.0664 15.1578 18.2414 16 17.3248 16C16.3165 16 15.5832 15.1578 15.5832 14.2222C15.5832 13.9415 15.5832 13.6608 15.7665 13.3801H10.3583C10.45 13.6608 10.5416 13.9415 10.5416 14.2222C10.5416 15.1578 9.71663 16 8.80003 16C7.79171 16 7.05842 15.1578 7.05842 14.2222C7.05842 13.9415 7.15014 13.6608 7.24175 13.3801L3.11698 2.52591L2.65862 1.216H0.000386838L0 0ZM5.68321 3.46204H19.8912C20.4412 3.46204 21.0829 3.92992 20.9912 4.58483L19.2496 11.3219H8.61634L5.68309 3.46204H5.68321ZM14.0245 5.80122V9.45029C14.0245 10.1988 12.9246 10.1988 12.9246 9.45029V5.80122C12.9246 5.05271 14.0245 5.05271 14.0245 5.80122ZM11.6412 5.80122V9.45029C11.6412 10.1988 10.4496 10.1988 10.4496 9.45029V5.80122C10.4496 5.05271 11.6412 5.05271 11.6412 5.80122ZM16.4995 5.80122V9.45029C16.4995 10.1988 15.3078 10.1988 15.3078 9.45029V5.80122C15.3078 5.05271 16.4995 5.05271 16.4995 5.80122ZM8.79959 13.474C9.16625 13.474 9.53288 13.7548 9.53288 14.2225C9.53288 14.5968 9.16622 14.9711 8.79959 14.9711C8.43294 14.9711 8.06631 14.5968 8.06631 14.2225C8.06631 13.7547 8.43297 13.474 8.79959 13.474ZM17.3244 13.474C17.6911 13.474 18.0577 13.7548 18.0577 14.2225C18.0577 14.5968 17.691 14.9711 17.3244 14.9711C16.8661 14.9711 16.5911 14.5968 16.5911 14.2225C16.5911 13.7547 16.8662 13.474 17.3244 13.474Z"
+                fill="#FCFCFC" />
+            </svg>
+
             Cart
           </a>
         </div>
@@ -73,49 +113,55 @@
 
     <section class="main-screen">
 
-      <div class="container">
+      <div class="main-screen__inner">
 
-        <div class="main-screen__inner">
-
-          <div class="main-screen__item">
-            <h2 class="main-screen__item-title">
-              <span class="main-screen__item-subtitle">
-
-                Save The Weekend </span>
-              Awesome design Best Furniture For Your Interior.
-            </h2>
-
-            <a class="main-screen__item-link" href="#">
-              Explore More
-            </a>
+        <div class="main-screen__item" style="background-image: url('images/slides/slide-1.jpg');">
+          <div class="container">
+            <div class="main-screen__item-wrapper">
+              <h2 class="main-screen__item-title">
+                <span class="main-screen__item-subtitle">
+                  Save The Weekend
+                </span>
+                Awesome design Best Furniture For Your Interior.
+              </h2>
+              <a class="main-screen__item-link" href="#">
+                Explore More
+              </a>
+            </div>
           </div>
+        </div>
 
-          <div class="main-screen__item">
-            <h2 class="main-screen__item-title">
-              <span class="main-screen__item-subtitle">
-
-                Save The Weekend </span>
-              Awesome design Best Furniture For Your Interior.
-            </h2>
-
-            <a class="main-screen__item-link" href="#">
-              Explore More
-            </a>
+        <div class="main-screen__item" style="background-image: url('images/slides/slide-1.jpg');">
+          <div class="container">
+            <div class="main-screen__item-wrapper">
+              <h2 class="main-screen__item-title">
+                <span class="main-screen__item-subtitle">
+                  Save The Weekend
+                </span>
+                Awesome design Best Furniture For Your Interior.
+              </h2>
+              <a class="main-screen__item-link" href="#">
+                Explore More
+              </a>
+            </div>
           </div>
+        </div>
 
-          <div class="main-screen__item">
-            <h2 class="main-screen__item-title">
-              <span class="main-screen__item-subtitle">
 
-                Save The Weekend </span>
-              Awesome design Best Furniture For Your Interior.
-            </h2>
-
-            <a class="main-screen__item-link" href="#">
-              Explore More
-            </a>
+        <div class="main-screen__item" style="background-image: url('images/slides/slide-1.jpg');">
+          <div class="container">
+            <div class="main-screen__item-wrapper">
+              <h2 class="main-screen__item-title">
+                <span class="main-screen__item-subtitle">
+                  Save The Weekend
+                </span>
+                Awesome design Best Furniture For Your Interior.
+              </h2>
+              <a class="main-screen__item-link" href="#">
+                Explore More
+              </a>
+            </div>
           </div>
-
         </div>
 
       </div>
@@ -161,46 +207,46 @@
           Our Products
         </h2>
 
-        <ul class="product__filter">
-          <li class="product__filter-item">
-            <button class="product__filter-btn" type="button">
+        <ul class="products__filter">
+          <li class="products__filter-item">
+            <button class="products__filter-btn" type="button">
               Single Sofa
             </button>
           </li>
-          <li class="product__filter-item">
-            <button class="product__filter-btn" type="button">
+          <li class="products__filter-item">
+            <button class="products__filter-btn" type="button">
               Living Room
             </button>
           </li>
-          <li class="product__filter-item">
-            <button class="product__filter-btn" type="button">
+          <li class="products__filter-item">
+            <button class="products__filter-btn" type="button">
               Kitchen
             </button>
           </li>
-          <li class="product__filter-item">
-            <button class="product__filter-btn" type="button">
+          <li class="products__filter-item">
+            <button class="products__filter-btn" type="button">
               Bed Room
             </button>
           </li>
-          <li class="product__filter-item">
-            <button class="product__filter-btn" type="button">
+          <li class="products__filter-item">
+            <button class="products__filter-btn" type="button">
               Bath Room
             </button>
           </li>
-          <li class="product__filter-item">
-            <button class="product__filter-btn" type="button">
+          <li class="products__filter-item">
+            <button class="products__filter-btn" type="button">
               Decorations
             </button>
           </li>
-          <li class="product__filter-item">
-            <button class="product__filter-btn" type="button">
+          <li class="products__filter-item">
+            <button class="products__filter-btn" type="button">
               Ceramics
             </button>
           </li>
         </ul>
 
-        <ul class="product__list">
-          <li class="product__item">
+        <ul class="products__list">
+          <li class="products__item">
             <article class="product-card">
 
             </article>
@@ -240,73 +286,78 @@
 
       <div class="container">
 
-        <div class="gallery__inner">
+        <div class="gallery__item">
 
-          <div class="gallery__item">
-            <img class="gallery__item-img" src="" alt="">
-            <div class="gallery__item-content">
-              <h3 class="gallery__item-title">
-                Living Room Items
-              </h3>
-              <p class="gallery__item-text">
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-                Latin literature from 45 professor at Hampden-Sydney College in Virginia, looked up one of the more
-                obscure Latin words, consectetur.
-              </p>
-              <a class="gallery__item-link" href="#">
-                Read More
-              </a>
-            </div>
+          <img class="gallery__item-img" src="images/gallery/virender-singh.jpg" alt="virender singh">
+
+          <div class="gallery__item-content">
+            <h3 class="gallery__item-title">
+              Living Room Items
+            </h3>
+            <p class="gallery__item-text">
+              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+              Latin literature from 45 professor at Hampden-Sydney College in Virginia, looked up one of the more
+              obscure Latin words, consectetur.
+            </p>
+            <a class="gallery__item-link" href="#">
+              Read More
+            </a>
           </div>
+        </div>
 
-          <div class="gallery__item">
-            <img class="gallery__item-img" src="" alt="">
-            <div class="gallery__item-content">
-              <h3 class="gallery__item-title">
-                Trendy Dining Table
-              </h3>
-              <p class="gallery__item-text">
-                Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC, making it over
-                2000 years old. Richard McClintock, a Latin.
-              </p>
-              <a class="gallery__item-link" href="#">
-                Read More
-              </a>
-            </div>
+        <div class="gallery__item">
+
+          <img class="gallery__item-img" src="images/gallery/modern-dining-room.jpg" alt="modern dining room">
+
+          <div class="gallery__item-content">
+            <h3 class="gallery__item-title">
+              Trendy Dining Table
+            </h3>
+            <p class="gallery__item-text">
+              Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC, making it over
+              2000 years old. Richard McClintock, a Latin.
+            </p>
+            <a class="gallery__item-link" href="#">
+              Read More
+            </a>
           </div>
+        </div>
 
-          <div class="gallery__item">
-            <img class="gallery__item-img" src="" alt="">
-            <div class="gallery__item-content">
-              <h3 class="gallery__item-title">
-                Modern Bed
-              </h3>
-              <p class="gallery__item-text">
-                Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC, making it over
-                2000 years old. Richard McClintock, a Latin.
-              </p>
-              <a class="gallery__item-link" href="#">
-                Read More
-              </a>
-            </div>
+        <div class="gallery__item">
+
+          <img class="gallery__item-img" src="images/gallery/fred-kleber.jpg" alt="fred kleber">
+
+          <div class="gallery__item-content">
+            <h3 class="gallery__item-title">
+              Modern Bed
+            </h3>
+            <p class="gallery__item-text">
+              Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC, making it over
+              2000 years old. Richard McClintock, a Latin.
+            </p>
+            <a class="gallery__item-link" href="#">
+              Read More
+            </a>
           </div>
+        </div>
 
-          <div class="gallery__item">
-            <img class="gallery__item-img" src="" alt="">
-            <div class="gallery__item-content">
-              <h3 class="gallery__item-title">
-                Populer kitchen Items
-              </h3>
-              <p class="gallery__item-text">
-                Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC, making it over
-                2000 years old. Richard McClintock, a Latin.
-              </p>
-              <a class="gallery__item-link" href="#">
-                Read More
-              </a>
-            </div>
+        <div class="gallery__item">
+
+          <img class="gallery__item-img" src="images/gallery/neonbrand.jpg" alt="neonbrand">
+
+          <div class="gallery__item-content">
+            <h3 class="gallery__item-title">
+              Populer kitchen Items
+            </h3>
+            <p class="gallery__item-text">
+              Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC, making it
+              over
+              2000 years old. Richard McClintock, a Latin.
+            </p>
+            <a class="gallery__item-link" href="#">
+              Read More
+            </a>
           </div>
-
         </div>
 
       </div>
@@ -340,8 +391,8 @@
 
       <div class="footer__main">
         <div class="footer__leftside">
-          <a class="logo" href="#">
-            <img class="logo__img" src="images/logo.svg" alt="logo">
+          <a class="footer__logo logo" href="#">
+            <img class="logo__img" src="images/logo-dark.svg" alt="logo">
           </a>
           <p class="footer__lefside-text">
             Contrary to popular belief, Lorem
@@ -426,7 +477,7 @@
             </h3>
 
             <address class="contacts">
-              <div class="contacts__pos">
+              <div class="contacts__location">
                 45 Tooring High SL London SA17
                 United kingdoom
               </div>
@@ -445,21 +496,21 @@
             </h3>
 
             <ul class="work-time">
-              <li class="wort-time__item">
+              <li class="work-time__item">
                 Mon-Fri:
-                <span class="wort-time__item-value">
+                <span class="work-time__item-value">
                   09.00am - 19.00pm
                 </span>
               </li>
-              <li class="wort-time__item">
+              <li class="work-time__item">
                 Saturday:
-                <span class="wort-time__item-value">
+                <span class="work-time__item-value">
                   10.00am - 18.00pm
                 </span>
               </li>
-              <li class="wort-time__item">
+              <li class="work-time__item">
                 Sunday:
-                <span class="wort-time__item-value">
+                <span class="work-time__item-value">
                   We are Closed
                 </span>
               </li>
@@ -468,14 +519,15 @@
         </div>
       </div>
 
-      <div class="footer__copir">
-        2021 Greenery. All Right Reserved</div>
+      <div class="copyright">
+        &#169 2021 Greenery. All Right Reserved</div>
     </div>
   </footer>
 
 
 
   <script src="js/jquery3.6.2.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

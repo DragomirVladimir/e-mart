@@ -1,0 +1,58 @@
+.header {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 0;
+    padding-left: 95px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 35px;
+  }
+
+  &__link {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.04em;
+    color: #3E5860;
+    position: relative;
+  }
+
+  &__link-icon {
+    position: absolute;
+    height: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__link--login,
+  &__link--singin {
+    padding-right: 32px;
+
+    .header__link-icon {
+      right: 0;
+    }
+  }
+
+  &__link--mail,
+  &__link--share,
+  &__link--cart {
+    padding-left: 32px;
+
+    .header__link-icon {
+      left: 0;
+    }
+  }
+
+}
