@@ -5,7 +5,49 @@
 @import 'rating';
 
 .nav {
-  display: none;
+  position: absolute;
+  height: 100vh;
+  width: fit-content;
+  max-width: 165px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #002A32;
+  overflow: auto;
+
+  &__item:first-child {
+    margin-bottom: 70px;
+  }
+
+  &__link {
+    display: block;
+    padding: 20px 35px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: #8999A1;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #B6DCFF;
+
+      .nav__link-icon path {
+        fill: #B6DCFF;
+      }
+
+    }
+  }
+
+  &__link-icon {
+    display: block;
+    width: fit-content;
+    max-width: 30px;
+    margin: 0 auto;
+
+    path {
+      transition: fill 0.3s;
+    }
+  }
+
 }
 
 .main-screen {
@@ -31,32 +73,20 @@
   &__item-title {
     max-width: 394px;
     margin-bottom: 18px;
-    font-family: 'Dosis', sans-serif;
-    font-weight: 600;
     font-size: 50px;
-    line-height: 1.3;
-    color: #264A51;
   }
 
   &__item-subtitle {
     display: block;
     margin-bottom: 8px;
-    font-family: 'Dancing Script';
+    font-family: 'Dancing Script', cursive;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.5;
   }
 
   &__item-link {
-    width: fit-content;
-    padding: 8px 17px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 1.3;
-    color: #264A51;
-    border: 1.5px solid #43717D;
-    border-radius: 3px;
+    margin: 0;
   }
 
   .slick-track {
@@ -94,7 +124,7 @@
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
@@ -108,11 +138,6 @@
   &__title {
     margin-bottom: 27px;
     text-align: center;
-    font-family: 'Dosis', sans-serif;
-    font-weight: 600;
-    font-size: 46px;
-    line-height: 1.3;
-    color: #264A51;
   }
 
   &__filter {
@@ -167,11 +192,7 @@
 
   &__subtitle {
     margin-bottom: 15px;
-    font-weight: 600;
     font-size: 60px;
-    line-height: 1.3;
-    opacity: 1;
-    color: #264A51;
   }
 
   &__description {
@@ -180,17 +201,6 @@
     margin-bottom: 32px;
   }
 
-  &__link {
-    width: fit-content;
-    padding: 8px 17px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 1.3;
-    color: #264A51;
-    border: 1.5px solid #43717D;
-    border-radius: 3px;
-  }
 }
 
 .gallery {
@@ -223,28 +233,11 @@
 
   &__item-title {
     margin-bottom: 16px;
-    font-family: 'Dosis', sans-serif;
-    font-weight: 600;
-    font-size: 39px;
-    line-height: 1.3;
-    color: #264A51;
   }
 
 
   &__item-text {
     margin-bottom: 30px;
-  }
-
-  &__item-link {
-    width: fit-content;
-    padding: 8px 17px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 1.3;
-    color: #264A51;
-    border: 1.5px solid #43717D;
-    border-radius: 3px;
   }
 
 }
@@ -260,11 +253,6 @@
 
   &__title {
     margin-bottom: 15px;
-    font-family: 'Dosis', sans-serif;
-    font-weight: 600;
-    font-size: 46px;
-    line-height: 1.3;
-    color: #264A51;
   }
 
   &__description {
@@ -370,7 +358,7 @@
   line-height: 2;
 }
 
-.work-time {
+.service-hours {
   padding: 16px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
