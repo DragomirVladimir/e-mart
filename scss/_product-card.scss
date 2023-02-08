@@ -1,0 +1,90 @@
+.product-card {
+  max-width: 350px;
+  text-align: center;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 50px 20px 20px;
+    background-color: #F1F6F9;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    position: relative;
+  }
+
+  &__img {
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 33px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 9px;
+    background-color: #71B3C6;
+    border-radius: 2px;
+
+    &:hover .product-card__btn-icon {
+      path {
+        fill: #FFFFFF;
+      }
+    }
+  }
+
+  &__btn-icon {
+    object-fit: contain;
+
+    path {
+      transition: fill 0.3s;
+    }
+  }
+}
+
+.badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 14px;
+  padding: 30px 18px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #264A51;
+
+  &--new {
+    background-color: #71B3C6;
+    color: #D4DCE2;
+  }
+
+  &--stoke {
+    width: fit-content;
+    margin-right: -18px;
+    margin-top: 14px;
+    padding: 7px;
+    border-radius: 2px 0px 0px 2px;
+  }
+}
