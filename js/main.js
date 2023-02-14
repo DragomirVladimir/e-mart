@@ -34,7 +34,6 @@ $(function () {
 
     }
 
-
     else {
 
       $('.nav').removeClass('_hidden');
@@ -53,7 +52,6 @@ $(function () {
   })
 
 
-
   $('.main-screen__inner').slick({
     slidesToScroll: 1,
     centerMode: true,
@@ -62,7 +60,7 @@ $(function () {
     centerMode: 0,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
   })
 
 
@@ -82,16 +80,30 @@ $(function () {
 
   //Работа с корзиной//
 
-  const counterQnt = document.querySelector('.cart-qnt');
+  // const counterQnt = document.querySelector('.cart-qnt');
+
+
+  // $('.add-to-cart').on('click', function (event) {
+
+  //   counterQntValue = counterQntValue + 1;
+
+  //   counterQnt.innerHTML = counterQntValue;
+
+  //   // const productCard = event.target.closest('.product-card');
+
+
+  // }); 
+
+
   let counterQntValue = 0;
 
-  $('.add-to-cart').on('click', function (event) {
+  $('[data-cart]').on('click', function (event) {
 
-    counterQntValue = counterQntValue + 1;
+    counterQntValue = ++counterQntValue;
 
-    counterQnt.innerHTML = counterQntValue;
+    $('.cart-qnt').html(counterQntValue);
 
-    const productCard = event.target.closest('.product-card');
+    console.log(event.target.closest('.product-card'));
 
   });
 
