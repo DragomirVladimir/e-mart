@@ -25,6 +25,7 @@
     font-size: 16px;
     line-height: 1.6;
     letter-spacing: -0.04em;
+    text-transform: uppercase;
     color: #3E5860;
     position: relative;
   }
@@ -63,4 +64,17 @@
     fill: #3E5860;
   }
 
+  // &__link--cart {
+  //   padding-right: ;
+  // }
+
+}
+
+.cart-qnt {
+  padding-left: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 1.4;
+  color: #DD6060;
 }

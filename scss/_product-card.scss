@@ -50,6 +50,18 @@
       transition: fill 0.3s;
     }
   }
+
+  &__title-link {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.3s;
+
+
+    &:hover {
+      text-decoration-color: inherit;
+
+    }
+  }
 }
 
 .badges {

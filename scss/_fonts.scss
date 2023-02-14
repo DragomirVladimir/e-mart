@@ -1,17 +1,62 @@
 @font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Regular.woff'),
-    url('../fonts//Roboto-Regular.woff2');
+  font-family: 'Dancing Script';
+  src: url('../fonts/DancingScript-Bold.woff'),
+    url('../fonts/DancingScript-Bold.woff2');
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Regular.woff'),
+    url('../fonts/OpenSans-Regular.woff2');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Bold.woff'),
-    url('../fonts/Roboto-Bold.woff2');
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-SemiBold.woff'),
+    url('../fonts/OpenSans-SemiBold.woff2');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mukta';
+  src: url('../fonts/Mukta-Regular.woff'),
+    url('../fonts/Mukta-Regular.woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mukta';
+  src: url('../fonts/Mukta-Bold.woff'),
+    url('../fonts/Mukta-Bold.woff2');
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('../fonts/Dosis-SemiBold.woff'),
+    url('../fonts/Dosis-SemiBold.woff2');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dosis';
+  src: url('../fonts/Dosis-ExtraBold.woff'),
+    url('../fonts/Dosis-ExtraBold.woff2');
+  font-style: normal;
+  font-weight: 800;
   font-display: swap;
 }

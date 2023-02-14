@@ -6,11 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Greenery | Home page</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Dosis:wght@600;800&family=Mukta&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -41,6 +36,7 @@
             Sing Up
           </a>
         </div>
+
         <div class="header__item">
           <a class="header__link header__link--mail" href="#">
             <svg class="header__link-icon header__link-icon--mail" width="22" height="16" viewBox="0 0 22 16"
@@ -62,31 +58,144 @@
 
             Share
           </a>
-          <a class="header__link header__link--cart" href="#">
+          <a class="header__link header__link--cart" type="button">
             <svg class="header__link-icon header__link-icon" width="21" height="16" viewBox="0 0 21 16" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M0 0H3.48334L4.85832 3.64907L8.06667 12.1637H18.3332V12.7251C18.7915 13.0993 19.0664 13.5672 19.0664 14.2222C19.0664 15.1578 18.2414 16 17.3248 16C16.3165 16 15.5832 15.1578 15.5832 14.2222C15.5832 13.9415 15.5832 13.6608 15.7665 13.3801H10.3583C10.45 13.6608 10.5416 13.9415 10.5416 14.2222C10.5416 15.1578 9.71663 16 8.80003 16C7.79171 16 7.05842 15.1578 7.05842 14.2222C7.05842 13.9415 7.15014 13.6608 7.24175 13.3801L3.11698 2.52591L2.65862 1.216H0.000386838L0 0ZM5.68321 3.46204H19.8912C20.4412 3.46204 21.0829 3.92992 20.9912 4.58483L19.2496 11.3219H8.61634L5.68309 3.46204H5.68321ZM14.0245 5.80122V9.45029C14.0245 10.1988 12.9246 10.1988 12.9246 9.45029V5.80122C12.9246 5.05271 14.0245 5.05271 14.0245 5.80122ZM11.6412 5.80122V9.45029C11.6412 10.1988 10.4496 10.1988 10.4496 9.45029V5.80122C10.4496 5.05271 11.6412 5.05271 11.6412 5.80122ZM16.4995 5.80122V9.45029C16.4995 10.1988 15.3078 10.1988 15.3078 9.45029V5.80122C15.3078 5.05271 16.4995 5.05271 16.4995 5.80122ZM8.79959 13.474C9.16625 13.474 9.53288 13.7548 9.53288 14.2225C9.53288 14.5968 9.16622 14.9711 8.79959 14.9711C8.43294 14.9711 8.06631 14.5968 8.06631 14.2225C8.06631 13.7547 8.43297 13.474 8.79959 13.474ZM17.3244 13.474C17.6911 13.474 18.0577 13.7548 18.0577 14.2225C18.0577 14.5968 17.691 14.9711 17.3244 14.9711C16.8661 14.9711 16.5911 14.5968 16.5911 14.2225C16.5911 13.7547 16.8662 13.474 17.3244 13.474Z"
                 fill="#FCFCFC" />
             </svg>
-
             Cart
+            <span class="cart-qnt">
+              0
+            </span>
           </a>
+
         </div>
       </div>
     </div>
   </header>
 
+  <div class="cart">
+    <div class="container">
+      <div class="cart__inner">
+        <ul class="cart__list">
+          <li class="cart__item">
+            <article class="product-card">
+              <div class="product-card__box">
+                <a class="product-card__box-link" href="#">
+                  <img class="product-card__img" src="images/products/product-1.png" alt="Single Sofa">
+                </a>
+                <div class="badges">
+                  <div class="badge badge--sale">-20%</div>
+                  <div class="badge badge--new">New</div>
+                  <div class="badge badge--stoke">Out of stoke</div>
+                </div>
+
+                <ul class="product-card__buttons">
+                  <li class="product-card__buttons-item">
+                    <button class="product-card__btn" type="button">
+                      <svg class="product-card__btn-icon" width="19" height="19" viewBox="0 0 19 19" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M18.7332 16.653L12.8334 10.8038C13.5996 9.67121 14.0112 8.33997 14.0112 6.94549C14.0112 5.09027 13.2826 3.34622 11.9593 2.03417C10.6362 0.722359 8.87699 0 7.00571 0C5.1344 0 3.37523 0.722359 2.05181 2.0343C0.728488 3.34625 0 5.09037 0 6.94529C0 8.80022 0.728622 10.5446 2.05194 11.8566C3.37526 13.1686 5.13423 13.8908 7.00585 13.8908C8.42793 13.8908 9.78493 13.4733 10.9354 12.697L16.8295 18.5401C17.0284 18.7375 17.3943 18.6948 17.6464 18.4445L18.6367 17.4626C18.889 17.2128 18.9322 16.8501 18.7332 16.6528L18.7332 16.653ZM7.00595 12.0097C4.18935 12.0097 1.89815 9.73821 1.89815 6.94583C1.89815 4.15357 4.18962 1.88193 7.00595 1.88193C9.82241 1.88193 12.1137 4.15371 12.1137 6.94583C12.1137 9.73821 9.82254 12.0097 7.00595 12.0097Z"
+                          fill="#D4DCE2" />
+                        <path
+                          d="M10.5044 6.26271H7.69489V3.4775C7.69489 3.29648 7.54691 3.1499 7.36446 3.1499H6.64782C6.46524 3.1499 6.31739 3.29661 6.31739 3.4775V6.26285L3.50817 6.26272C3.32559 6.26272 3.17773 6.40943 3.17773 6.59031V7.30079C3.17773 7.4818 3.32572 7.62838 3.50817 7.62838H6.31739V10.4137C6.31739 10.5947 6.46537 10.7415 6.64782 10.7415H7.36446C7.54704 10.7415 7.69489 10.5947 7.69489 10.4137L7.69476 7.62825H10.5043C10.6868 7.62825 10.8347 7.48167 10.8347 7.30065V6.59018C10.8348 6.40955 10.687 6.26271 10.5044 6.26271V6.26271Z"
+                          fill="#D4DCE2" />
+                      </svg>
+
+                    </button>
+                  </li>
+                  <li class="product-card__buttons-item ">
+                    <button class="product-card__btn add-to-favorite" type="button">
+                      <svg class="product-card__btn-icon" width="20" height="19" viewBox="0 0 20 19" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M5.87389 0C2.64601 0 0 2.73244 0 6.06489C0 7.95506 1.06659 9.60357 2.7276 11.4568C4.38861 13.31 6.70525 15.4333 9.49464 18.3159L10 18.8365L10.5052 18.3159C13.3045 15.4327 15.6191 13.3103 17.278 11.4568C18.9369 9.60327 20 7.95363 20 6.06489C20 2.73252 17.3541 0 14.1261 0C12.2994 0 10.9864 1.09905 9.99973 2.42532C9.01323 1.09989 7.69951 0 5.87335 0H5.87389ZM5.87389 1.47308C7.44509 1.47308 8.56114 2.46312 9.38858 3.8841L10.0001 4.93714L10.6142 3.8841C11.4419 2.46312 12.555 1.47308 14.1262 1.47308C16.5721 1.47308 18.5708 3.53392 18.5708 6.06489C18.5708 7.37505 17.8053 8.69375 16.2286 10.4551C14.7701 12.0847 12.546 14.1717 10.0002 16.762C7.46146 14.1718 5.2408 12.0852 3.78039 10.4551C2.2009 8.69299 1.42974 7.37328 1.42974 6.06489C1.42974 3.53401 3.42832 1.47308 5.87425 1.47308H5.87389Z"
+                          fill="#D4DCE2" />
+                      </svg>
+
+                    </button>
+                  </li>
+                  <li class="product-card__buttons-item">
+                    <button class="product-card__btn add-to-cart" type="button">
+                      <svg class="product-card__btn-icon" width="23" height="20" viewBox="0 0 23 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M11.6807 9.40619C11.8952 9.61886 12.1814 9.73706 12.4674 9.73706C12.7773 9.73706 13.0634 9.61886 13.2541 9.40619L16.9492 5.5538C17.3544 5.12847 17.3544 4.41941 16.9014 4.01767C16.4724 3.59234 15.7572 3.61591 15.352 4.06499L12.4674 7.06655L11.2754 5.81395C10.8702 5.38862 10.155 5.36486 9.72597 5.76663C9.29695 6.16839 9.27298 6.87743 9.67824 7.30276L11.6807 9.40619Z"
+                          fill="#D4DCE2" />
+                        <path
+                          d="M21.8128 3.33232C21.2168 3.19054 20.6208 3.54499 20.5016 4.13584L18.9521 10.6588C18.7614 11.4861 18.0224 12.0532 17.1642 12.0532L9.44035 12.0534C8.58215 12.0534 7.81938 11.4389 7.65242 10.6117L5.55454 0.850826C5.43531 0.354426 5.00629 0 4.48183 0H1.09668C0.500706 0 0 0.4964 0 1.08725C0 1.6781 0.500706 2.1745 1.09668 2.1745H3.57586L5.48303 11.0845C5.88827 12.9044 7.53319 14.2515 9.41639 14.2515H17.1164C18.9996 14.2515 20.597 12.9989 21.026 11.179L22.5755 4.65599C22.7664 4.06497 22.3849 3.47412 21.8127 3.33236L21.8128 3.33232Z"
+                          fill="#D4DCE2" />
+                        <path
+                          d="M11.1089 17.4891C11.1089 18.4811 10.2978 19.2853 9.29707 19.2853C8.29652 19.2853 7.48535 18.4811 7.48535 17.4891C7.48535 16.497 8.29652 15.6929 9.29707 15.6929C10.2978 15.6929 11.1089 16.4971 11.1089 17.4891"
+                          fill="#D4DCE2" />
+                        <path
+                          d="M18.9283 17.4891C18.9283 18.4811 18.1171 19.2853 17.1164 19.2853C16.1159 19.2853 15.3047 18.4811 15.3047 17.4891C15.3047 16.497 16.1159 15.6929 17.1164 15.6929C18.1172 15.6929 18.9283 16.4971 18.9283 17.4891"
+                          fill="#D4DCE2" />
+                      </svg>
+
+                    </button>
+                  </li>
+                </ul>
+              </div>
+
+              <a class="product-card__title-link" href="#">
+                <h1 class="product-card__title">
+                  Single Sofa
+                </h1>
+              </a>
+
+              <span class="product-card__price">
+                £423.00
+              </span>
+
+              <div class="rating" data-total-value="3">
+                <div class="rating__item" data-item-value="5">
+                  ★
+                </div>
+                <div class="rating__item" data-item-value="4">
+                  ★
+                </div>
+                <div class="rating__item" data-item-value="3">
+                  ★
+                </div>
+                <div class="rating__item" data-item-value="2">
+                  ★
+                </div>
+                <div class="rating__item" data-item-value="1">
+                  ★
+                </div>
+              </div>
+
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <nav class="nav">
+
+    <button class="nav-btn" type="button">
+      <span class="sr-only">open menu</span>
+      <svg class="nav-btn__icon" width="20" height="32" viewBox="0 0 20 32" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M18.9641 14.9851L2.95082 0.392105C2.42535 -0.130702 1.57314 -0.130702 1.04767 0.392105C0.522196 0.914872 0.522196 1.76312 1.04767 2.28593L16.0954 16L1.049 29.7141C0.523529 30.2369 0.523529 31.0852 1.049 31.6079C1.57448 32.1307 2.42668 32.1307 2.95212 31.6079L18.9654 17.0149C19.2455 16.7362 19.3656 16.3668 19.3469 16.0014C19.3643 15.6346 19.2443 15.2652 18.9641 14.9851Z"
+          fill="#ffffff" />
+      </svg>
+    </button>
 
     <ul class="nav__list">
       <li class="nav__item">
-        <a class="nav__link logo" href="#">
+        <a class="nav__logo logo" href="#home">
           <img class="logo__img" src="images/logo.svg" alt="logo">
         </a>
       </li>
       <li class="nav__item">
-        <a class="nav__link" href="#">
+        <a class="nav__link nav__link--active" href="#home">
 
           <svg class="nav__link-icon" width="33" height="30" viewBox="0 0 33 30" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -99,7 +208,7 @@
         </a>
       </li>
       <li class="nav__item">
-        <a class="nav__link" href="#">
+        <a class="nav__link" href="#shop">
           <svg class="nav__link-icon" width="32" height="30" viewBox="0 0 32 30" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M8.52539 20.7261H11.9875V23.8662H8.52539V20.7261Z" fill="#CAD3DB" />
@@ -155,7 +264,7 @@
         </a>
       </li>
       <li class="nav__item">
-        <a class="nav__link" href="#">
+        <a class="nav__link" href="#gallery">
           <svg class="nav__link-icon" width="30" height="25" viewBox="0 0 30 25" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -167,7 +276,7 @@
         </a>
       </li>
       <li class="nav__item">
-        <a class="nav__link" href="#">
+        <a class="nav__link" href="#location">
           <svg class="nav__link-icon" width="30" height="32" viewBox="0 0 30 32" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -190,7 +299,7 @@
       Greenery. Home page
     </h1>
 
-    <section class="main-screen">
+    <section id="home" class="main-screen">
 
       <div class="main-screen__inner">
 
@@ -280,57 +389,48 @@
 
     </section>
 
-    <section class="products">
+    <section id="shop" class="products">
       <div class="container">
         <h2 class="products__title title">
           Our Products
         </h2>
 
         <ul class="products__filter">
+
           <li class="products__filter-item">
-            <button class="products__filter-btn" type="button">
-              Single Sofa
+            <button class="products__filter-btn" type="button" data-filter="all">
+              All Products
             </button>
           </li>
+
           <li class="products__filter-item">
-            <button class="products__filter-btn" type="button">
+            <button class="products__filter-btn" type="button" data-filter=".livig-room">
               Living Room
             </button>
           </li>
+
           <li class="products__filter-item">
-            <button class="products__filter-btn" type="button">
-              Kitchen
-            </button>
-          </li>
-          <li class="products__filter-item">
-            <button class="products__filter-btn" type="button">
+            <button class="products__filter-btn" type="button" data-filter=".bed-room">
               Bed Room
             </button>
           </li>
           <li class="products__filter-item">
-            <button class="products__filter-btn" type="button">
+
+            <button class="products__filter-btn" type="button" data-filter=".bath-room">
               Bath Room
             </button>
           </li>
-          <li class="products__filter-item">
-            <button class="products__filter-btn" type="button">
-              Decorations
-            </button>
-          </li>
-          <li class="products__filter-item">
-            <button class="products__filter-btn" type="button">
-              Ceramics
-            </button>
-          </li>
+
         </ul>
 
         <ul class="products__list">
-          <li class="products__item">
+          <li class="products__item mix livig-room">
 
             <article class="product-card">
               <div class="product-card__box">
-                <img class="product-card__img" src="images/products/product-1.png" alt="Single Sofa">
-
+                <a class="product-card__box-link" href="#">
+                  <img class="product-card__img" src="images/products/product-1.png" alt="Single Sofa">
+                </a>
                 <div class="badges">
                   <div class="badge badge--sale">-20%</div>
                   <div class="badge badge--new">New</div>
@@ -352,8 +452,8 @@
 
                     </button>
                   </li>
-                  <li class="product-card__buttons-item">
-                    <button class="product-card__btn" type="button">
+                  <li class="product-card__buttons-item ">
+                    <button class="product-card__btn add-to-favorite" type="button">
                       <svg class="product-card__btn-icon" width="20" height="19" viewBox="0 0 20 19" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -364,7 +464,7 @@
                     </button>
                   </li>
                   <li class="product-card__buttons-item">
-                    <button class="product-card__btn" type="button">
+                    <button class="product-card__btn add-to-cart" type="button">
                       <svg class="product-card__btn-icon" width="23" height="20" viewBox="0 0 23 20" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -386,9 +486,11 @@
                 </ul>
               </div>
 
-              <h1 class="product-card__title">
-                Single Sofa
-              </h1>
+              <a class="product-card__title-link" href="#">
+                <h1 class="product-card__title">
+                  Single Sofa
+                </h1>
+              </a>
 
               <span class="product-card__price">
                 £423.00
@@ -416,12 +518,13 @@
 
           </li>
 
-          <li class="products__item">
+          <li class="products__item mix bed-room">
 
             <article class="product-card">
               <div class="product-card__box">
-                <img class="product-card__img" src="images/products/product-2.png" alt="Single Sofa">
-
+                <a class="product-card__box-link" href="#">
+                  <img class="product-card__img" src="images/products/product-2.png" alt="Single Sofa">
+                </a>
                 <div class="badges">
                   <div class="badge badge--sale">-20%</div>
                 </div>
@@ -453,7 +556,7 @@
                     </button>
                   </li>
                   <li class="product-card__buttons-item">
-                    <button class="product-card__btn" type="button">
+                    <button class="product-card__btn add-to-cart" type="button">
                       <svg class="product-card__btn-icon" width="23" height="20" viewBox="0 0 23 20" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -475,9 +578,11 @@
                 </ul>
               </div>
 
-              <h1 class="product-card__title">
-                Single Sofa
-              </h1>
+              <a class="product-card__title-link" href="#">
+                <h1 class="product-card__title">
+                  Single Sofa
+                </h1>
+              </a>
 
               <span class="product-card__price">
                 £423.00
@@ -504,13 +609,13 @@
             </article>
           </li>
 
-
-          <li class="products__item">
+          <li class="products__item mix bath-room">
 
             <article class="product-card">
               <div class="product-card__box">
-                <img class="product-card__img" src="images/products/product-3.png" alt="Single Sofa">
-
+                <a class="product-card__box-link" href="#">
+                  <img class="product-card__img" src="images/products/product-3.png" alt="Single Sofa">
+                </a>
                 <div class="badges">
                   <div class="badge badge--sale">-20%</div>
                   <div class="badge badge--new">New</div>
@@ -542,7 +647,7 @@
                     </button>
                   </li>
                   <li class="product-card__buttons-item">
-                    <button class="product-card__btn" type="button">
+                    <button class="product-card__btn add-to-cart" type="button">
                       <svg class="product-card__btn-icon" width="23" height="20" viewBox="0 0 23 20" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -564,9 +669,11 @@
                 </ul>
               </div>
 
-              <h1 class="product-card__title">
-                Single Sofa
-              </h1>
+              <a class="product-card__title-link" href="#">
+                <h1 class="product-card__title">
+                  Single Sofa
+                </h1>
+              </a>
 
               <span class="product-card__price">
                 £423.00
@@ -594,12 +701,13 @@
 
           </li>
 
-          <li class="products__item">
+          <li class="products__item mix livig-room">
 
             <article class="product-card">
               <div class="product-card__box">
-                <img class="product-card__img" src="images/products/product-4.png" alt="Single Sofa">
-
+                <a class="product-card__box-link" href="#">
+                  <img class="product-card__img" src="images/products/product-4.png" alt="Single Sofa">
+                </a>
                 <div class="badges">
                   <div class="badge badge--sale">-20%</div>
                   <div class="badge badge--new">New</div>
@@ -633,7 +741,7 @@
                     </button>
                   </li>
                   <li class="product-card__buttons-item">
-                    <button class="product-card__btn" type="button">
+                    <button class="product-card__btn add-to-cart" type="button">
                       <svg class="product-card__btn-icon" width="23" height="20" viewBox="0 0 23 20" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -655,9 +763,11 @@
                 </ul>
               </div>
 
-              <h1 class="product-card__title">
-                Single Sofa
-              </h1>
+              <a class="product-card__title-link" href="#">
+                <h1 class="product-card__title">
+                  Single Sofa
+                </h1>
+              </a>
 
               <span class="product-card__price">
                 £423.00
@@ -685,12 +795,13 @@
 
           </li>
 
-          <li class="products__item">
+          <li class="products__item mix bed-room">
 
             <article class="product-card">
               <div class="product-card__box">
-                <img class="product-card__img" src="images/products/product-5.png" alt="Single Sofa">
-
+                <a class="product-card__box-link" href="#">
+                  <img class="product-card__img" src="images/products/product-5.png" alt="Single Sofa">
+                </a>
                 <div class="badges">
                   <div class="badge badge--sale">-20%</div>
                   <div class="badge badge--new">New</div>
@@ -723,7 +834,7 @@
                     </button>
                   </li>
                   <li class="product-card__buttons-item">
-                    <button class="product-card__btn" type="button">
+                    <button class="product-card__btn add-to-cart" type="button">
                       <svg class="product-card__btn-icon" width="23" height="20" viewBox="0 0 23 20" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -745,9 +856,11 @@
                 </ul>
               </div>
 
-              <h1 class="product-card__title">
-                Single Sofa
-              </h1>
+              <a class="product-card__title-link" href="#">
+                <h1 class="product-card__title">
+                  Single Sofa
+                </h1>
+              </a>
 
               <span class="product-card__price">
                 £423.00
@@ -775,12 +888,13 @@
 
           </li>
 
-          <li class="products__item">
+          <li class="products__item mix livig-room">
 
             <article class="product-card">
               <div class="product-card__box">
-                <img class="product-card__img" src="images/products/product-6.png" alt="Single Sofa">
-
+                <a class="product-card__box-link" href="#">
+                  <img class="product-card__img" src="images/products/product-6.png" alt="Single Sofa">
+                </a>
                 <div class="badges">
                   <div class="badge badge--sale">-20%</div>
                   <div class="badge badge--new">New</div>
@@ -813,7 +927,7 @@
                     </button>
                   </li>
                   <li class="product-card__buttons-item">
-                    <button class="product-card__btn" type="button">
+                    <button class="product-card__btn add-to-cart" type="button">
                       <svg class="product-card__btn-icon" width="23" height="20" viewBox="0 0 23 20" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -835,9 +949,11 @@
                 </ul>
               </div>
 
-              <h1 class="product-card__title">
-                Single Sofa
-              </h1>
+              <a class="product-card__title-link" href="#">
+                <h1 class="product-card__title">
+                  Single Sofa
+                </h1>
+              </a>
 
               <span class="product-card__price">
                 £423.00
@@ -881,7 +997,8 @@
           </h3>
 
           <p class="sale__description">
-            Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC, making it over
+            Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC, making
+            it over
             2000 years old. Richard McClintock, a Latin.
           </p>
 
@@ -892,7 +1009,7 @@
       </div>
     </section>
 
-    <section class="gallery">
+    <section id="gallery" class="gallery">
       <h2 class="sr-only">
         Gallery
       </h2>
@@ -908,13 +1025,19 @@
               Living Room Items
             </h3>
             <p class="gallery__item-text">
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-              Latin literature from 45 professor at Hampden-Sydney College in Virginia, looked up one of the more
+              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+              classical
+              Latin literature from 45 professor at Hampden-Sydney College in Virginia, looked up one of the
+              more
               obscure Latin words, consectetur.
             </p>
             <a class="link" href="#">
               Read More
             </a>
+
+            <div class="gallery__item-badge">
+              Living
+            </div>
           </div>
         </div>
 
@@ -927,13 +1050,19 @@
               Trendy Dining Table
             </h3>
             <p class="gallery__item-text">
-              Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC, making it over
+              Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC,
+              making it over
               2000 years old. Richard McClintock, a Latin.
             </p>
             <a class="link" href="#">
               Read More
             </a>
+
+            <div class="gallery__item-badge">
+              Living
+            </div>
           </div>
+
         </div>
 
         <div class="gallery__item">
@@ -945,12 +1074,16 @@
               Modern Bed
             </h3>
             <p class="gallery__item-text">
-              Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC, making it over
+              Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC,
+              making it over
               2000 years old. Richard McClintock, a Latin.
             </p>
             <a class="link" href="#">
               Read More
             </a>
+            <div class="gallery__item-badge">
+              Living
+            </div>
           </div>
         </div>
 
@@ -963,14 +1096,20 @@
               Populer kitchen Items
             </h3>
             <p class="gallery__item-text">
-              Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC, making it
+              Contrary to popular belief, Lorem Ipsum is not simply random text. literature from 45 BC,
+              making it
               over
               2000 years old. Richard McClintock, a Latin.
             </p>
             <a class="link" href="#">
               Read More
             </a>
+
+            <div class="gallery__item-badge">
+              Living
+            </div>
           </div>
+
         </div>
 
       </div>
@@ -999,12 +1138,12 @@
 
   </main>
 
-  <footer class="footer">
+  <footer id="location" class="footer">
     <div class="container">
 
       <div class="footer__main">
         <div class="footer__leftside">
-          <a class="footer__logo logo" href="#">
+          <a class="footer__logo logo" href="#home">
             <img class="logo__img" src="images/logo-dark.svg" alt="logo">
           </a>
           <p class="footer__lefside-text">
@@ -1163,12 +1302,14 @@
       <div class="copyright">
         &#169 2021 Greenery. All Right Reserved</div>
     </div>
+
   </footer>
 
 
 
   <script src="js/jquery3.6.2.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/mixitup.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

@@ -1,11 +1,13 @@
 @import 'reset';
+@import 'fonts';
 @import 'global';
 @import 'header';
 @import 'product-card';
 @import 'rating';
+@import 'cart';
 
 .nav {
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: fit-content;
   max-width: 165px;
@@ -13,10 +15,21 @@
   left: 0;
   z-index: 100;
   background-color: #002A32;
-  overflow: auto;
+  transition: transform 0.6s;
+
+  &__list {
+    height: 100%;
+    overflow: auto;
+    position: relative;
+  }
 
   &__item:first-child {
     margin-bottom: 70px;
+  }
+
+  &__logo {
+    display: block;
+    padding: 20px 35px;
   }
 
   &__link {
@@ -25,15 +38,24 @@
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     color: #8999A1;
-    transition: color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
 
     &:hover {
+      color: #B6DCFF;
+      background-color: #3C6C7F;
+
+      .nav__link-icon path {
+        fill: #B6DCFF;
+      }
+    }
+
+    &--active {
+      background-color: #3C6C7F;
       color: #B6DCFF;
 
       .nav__link-icon path {
         fill: #B6DCFF;
       }
-
     }
   }
 
@@ -47,6 +69,47 @@
       transition: fill 0.3s;
     }
   }
+
+}
+
+.nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 46px;
+  overflow: hidden;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  transform: translateX(100%);
+  background-color: #002A32;
+  opacity: 0;
+  border-left: 1px solid #3E5860;
+  transition: opacity 0.3s, width 0.3s;
+
+  &__icon {
+    object-fit: contain;
+    transition: transform 0.3s;
+  }
+
+
+  &--show {
+    width: 46px;
+    opacity: 0.6;
+  }
+
+  &--active {
+    .nav-btn__icon {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+
 
 }
 
@@ -142,7 +205,7 @@
 
   &__filter {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
     margin-bottom: 28px;
   }
@@ -159,7 +222,6 @@
 
     &:hover {
       border-color: #3E5860;
-
     }
   }
 
@@ -168,6 +230,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+}
+
+.mixitup-control-active {
+  border-color: #3E5860;
 }
 
 .sale {
@@ -209,11 +275,19 @@
   &__item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 40px;
 
     &:nth-child(even) {
       flex-direction: row-reverse;
+
+      .gallery__item-content {
+        padding: 0 80px 0 0;
+      }
+
+      .gallery__item-badge {
+        left: auto;
+        right: 0;
+        transform: translateX(50%);
+      }
     }
 
     &:not(:last-child) {
@@ -221,14 +295,15 @@
     }
   }
 
-  // &__item-img-box {
-  //   flex: none;
-  //   max-width: 56%;
-
-  // }
-
   &__item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 0 0 0 80px;
+    position: relative;
+
   }
 
   &__item-title {
@@ -238,6 +313,25 @@
 
   &__item-text {
     margin-bottom: 30px;
+  }
+
+  &__item-badge {
+    width: fit-content;
+    min-width: 130px;
+    padding: 60px 10px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 1.4;
+    color: #FFFFFF;
+    background: rgba(113, 179, 198, 0.85);
+    border-radius: 3px;
+    bottom: 10%;
+    left: 0;
+    transform: translateX(-50%);
   }
 
 }
@@ -275,10 +369,16 @@
     background-color: #DAE6EE;
     box-shadow: 0px 15px 30px rgba(34, 34, 34, 0.11);
     border-radius: 50px;
+    transition: box-shadow 0.3s;
 
     &::placeholder {
       font-size: 14px;
       color: rgba(69, 94, 101, 0.47);
+    }
+
+    &:focus-visible {
+      outline: transparent;
+      box-shadow: rgb(38 73 80) 0px 0px 20px 2px;
     }
   }
 
@@ -290,12 +390,20 @@
     position: absolute;
     top: 0;
     right: 0;
-    font-weight: 500;
     font-size: 17px;
     color: #FFFFFF;
     background-color: hsla(190, 36%, 23%, 0.89);
     box-shadow: -2px 15px 40px rgba(0, 0, 0, 0.11);
     border-radius: 50px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #264950;
+    }
+
+    &:active {
+      background-color: #71B3C6;
+    }
   }
 }
 
