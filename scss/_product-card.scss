@@ -35,11 +35,16 @@
     padding: 9px;
     background-color: #71B3C6;
     border-radius: 2px;
+    transition: background-color 0.3s;
 
     &:hover .product-card__btn-icon {
       path {
         fill: #FFFFFF;
       }
+    }
+
+    &:active {
+      background-color: #264A51;
     }
   }
 
@@ -61,6 +66,12 @@
       text-decoration-color: inherit;
 
     }
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 1.3;
+    color: #264A51;
   }
 }
 

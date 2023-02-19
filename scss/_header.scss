@@ -27,36 +27,14 @@
     letter-spacing: -0.04em;
     text-transform: uppercase;
     color: #3E5860;
-    position: relative;
   }
 
   &__link-icon {
-    position: absolute;
     height: 16px;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-right: 10px;
 
     path {
       transition: fill 0.3s;
-    }
-  }
-
-  &__link--login,
-  &__link--singin {
-    padding-right: 32px;
-
-    .header__link-icon {
-      right: 0;
-    }
-  }
-
-  &__link--mail,
-  &__link--share,
-  &__link--cart {
-    padding-left: 32px;
-
-    .header__link-icon {
-      left: 0;
     }
   }
 
@@ -64,9 +42,6 @@
     fill: #3E5860;
   }
 
-  // &__link--cart {
-  //   padding-right: ;
-  // }
 
 }
 

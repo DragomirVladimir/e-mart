@@ -69,4 +69,9 @@ body {
 
 ._hidden {
   transform: translateX(-100%);
+  overflow: hidden;
+}
+
+.disable-scroll {
+  overflow: hidden;
 }

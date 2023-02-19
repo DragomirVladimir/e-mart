@@ -103,11 +103,32 @@ $(function () {
 
     $('.cart-qnt').html(counterQntValue);
 
-    console.log(event.target.closest('.product-card'));
+    // console.log(event.target.closest('.product-card'));
+
+    const product = event.target.closest('.product-card');
+
+    const productInfo = {
+      productId: product.dataset.productId,
+      imgSrc: product.querySelector('.product-card__img').getAttribute('src'),
+      imgAlt: product.querySelector('.product-card__img').getAttribute('alt'),
+      tetle: product.querySelector('.product-card__title').innerText,
+      price: product.querySelector('.product-card__price').innerText,
+    }
+
+    console.log(productInfo);
 
   });
 
 
+  $('.header__link--cart').on('click', function () {
+    $('.cart').toggleClass('cart--open');
+    $('body').addClass('disable-scroll');
+  })
+
+  $('.cart__close-btn').on('click', function () {
+    $('.cart').removeClass('cart--open');
+    $('body').removeClass('disable-scroll');
+  })
 
 
   var mixer = mixitup('.products__list');
