@@ -98,11 +98,14 @@
 }
 
 .cart-product {
+  height: fit-content;
+  min-height: 100px;
   padding: 12px;
   background-color: #ffffff;
   border: 1px solid #C1C1C1;
   border-radius: 3px;
   position: relative;
+  transition: all 0.3s;
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -227,4 +230,11 @@
     font-weight: 700;
   }
 
+}
+
+.product-hide {
+  min-height: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
 }
