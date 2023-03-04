@@ -755,13 +755,6 @@ body {
   font-weight: 700;
 }
 
-.product-hide {
-  min-height: 0;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
 .nav {
   position: fixed;
   height: 100vh;
@@ -1188,7 +1181,7 @@ body {
   right: 0;
   font-size: 17px;
   color: #FFFFFF;
-  background-color: hsla(190deg, 36%, 23%, 0.89);
+  background-color: hsla(190, 36%, 23%, 0.89);
   -webkit-box-shadow: -2px 15px 40px rgba(0, 0, 0, 0.11);
           box-shadow: -2px 15px 40px rgba(0, 0, 0, 0.11);
   border-radius: 50px;

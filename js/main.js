@@ -92,7 +92,6 @@ $(function () {
     $('body').removeClass('disable-scroll');
   })
 
-
   function reountCart() {
 
     $('.cart-qnt').html($('[data-cart-list] article').length);
@@ -109,7 +108,7 @@ $(function () {
       imgSrc: $('.product-card__img', product).attr('src'),
       imgAlt: $('.product-card__img', product).attr('alt'),
       title: $('.product-card__title', product).text().trim(),
-      price: $('.product-card__price', product).text().trim(),
+      price: $('[data-product-price]', product).text().trim(),
     };
 
 
@@ -133,7 +132,11 @@ $(function () {
               </h1>
             </a>
             <div class="cart-product__price">
-            ${productInfo.price}
+           
+                <span class="currency">£</span>
+
+                <span class="cart-product__price-value" data-cart-product-price>${productInfo.price}</span>
+           
             </div>
           </div>
     
@@ -154,7 +157,11 @@ $(function () {
           </div>
     
           <div class="cart-product__total-price">
-            £423.00
+
+            <span class="currency">£</span>
+
+            <span class="cart-product__total-price-value" data-cart-product-total-price>0.00</span>
+
           </div>
     
         </div>
@@ -176,8 +183,12 @@ $(function () {
 
     reountCart();
 
+    calcProductPrice();
+
+    //calcCartPrice();
 
   });
+
 
 
   $(document).on('click', '[data-counter-add]', function () {
@@ -185,7 +196,12 @@ $(function () {
     const productCounter = $(this).closest('.cart-product__counter-box');
     const counterValue = productCounter.find('.cart-product__counter-value');
     const counterValueText = counterValue.text();
+
     counterValue.html(parseInt(counterValueText) + 1);
+
+    calcProductPrice();
+
+    //calcCartPrice();
 
   })
 
@@ -201,6 +217,10 @@ $(function () {
 
     }
 
+    calcProductPrice();
+
+    //calcCartPrice()
+
   })
 
 
@@ -208,10 +228,58 @@ $(function () {
 
     const cartProduct = $(this).closest('.cart-product');
 
-    cartProduct.remove()
+    cartProduct.remove();
 
     reountCart();
+
+    //calcCartPrice();
+
   })
+
+
+
+  function calcProductPrice() {
+
+    const productTotalPrice = $('[data-cart-product-total-price]');
+    const productTotalPriceText = productTotalPrice.text();
+    const cartProduct = productTotalPrice.closest('cart-product');
+    const productQnt = cartProduct.find('.cart-product__counter-value').text();
+    const productPrice = cartProduct.find('[data-cart-product-price]').text();
+
+    console.log(productQnt, productPrice);
+
+
+
+    // const productPrice = $('.cart-product [data-cart-product-price]');
+    // const productQnt = $('.cart-product .cart-product__counter-value');
+    // const productTotalPrice = $('.cart-product [data-cart-product-total-price]');
+    // const productPriceResult = parseInt(productPrice.text()) * parseInt(productQnt.text());
+    // productTotalPrice.html(productPriceResult);
+
+  }
+
+
+  // function calcCartPrice() {
+
+  // let cartTotalPrice = 0;
+
+  // const dataTotalCost = $('[data-total-cost]');
+
+  // const productTotalPrice = $('.cart-product [data-cart-product-total-price]');
+
+  // console.log(productTotalPrice.text());
+
+  // $.each(productTotalPrice, function () {
+
+  //   cartTotalPrice = cartTotalPrice + ;
+
+  // })
+
+  // dataTotalCost.html(cartTotalPrice);
+
+  // }
+
+
 
 
 
@@ -221,21 +289,27 @@ $(function () {
 
 });
 
+
+
 // const allCartBtn = document.querySelectorAll('.add-to-cart');
 
 
-  // console.log(allCartBtn);
+// console.log(allCartBtn);
 
-  // allCartBtn.forEach((button, index) => {
-  //   button.addEventListener('click', () => {
+// allCartBtn.forEach((button, index) => {
+//   button.addEventListener('click', () => {
+//     console.log("forEach worked", index)
 
+//   });
 
+// });
 
-  //     console.log("forEach worked", index);
+// const arr = [1, 2, 3];
+// const arr2 = [];
+// arr.forEach(el => {
+//   el = el * 2;
+//   arr2.push(el);
 
+// })
 
-
-
-
-  //   });
-  // });
+// console.log(arr2);
