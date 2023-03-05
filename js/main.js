@@ -1,7 +1,6 @@
 $(function () {
 
 
-
   $('.nav__link').on('click', function () {
     $('.nav__link').removeClass('nav__link--active');
     $(this).addClass('nav__link--active');
@@ -18,7 +17,6 @@ $(function () {
     $('body,html').animate({ scrollTop: top }, 1500);
 
   })
-
 
 
 
@@ -185,7 +183,7 @@ $(function () {
 
     calcProductPrice();
 
-    //calcCartPrice();
+    calcCartPrice();
 
   });
 
@@ -200,8 +198,7 @@ $(function () {
     counterValue.html(parseInt(counterValueText) + 1);
 
     calcProductPrice();
-
-    //calcCartPrice();
+    calcCartPrice();
 
   })
 
@@ -219,7 +216,7 @@ $(function () {
 
     calcProductPrice();
 
-    //calcCartPrice()
+    calcCartPrice();
 
   })
 
@@ -232,7 +229,7 @@ $(function () {
 
     reountCart();
 
-    //calcCartPrice();
+    calcCartPrice();
 
   })
 
@@ -240,48 +237,38 @@ $(function () {
 
   function calcProductPrice() {
 
-    const productTotalPrice = $('[data-cart-product-total-price]');
-    const productTotalPriceText = productTotalPrice.text();
-    const cartProduct = productTotalPrice.closest('cart-product');
-    const productQnt = cartProduct.find('.cart-product__counter-value').text();
-    const productPrice = cartProduct.find('[data-cart-product-price]').text();
+    const cartProducts = $('.cart-product');
 
-    console.log(productQnt, productPrice);
+    cartProducts.each(function (item) {
+      const productPrice = $(this).find('[data-cart-product-price]');
+      const productQnt = $(this).find('.cart-product__counter-value');
+      const productTotalPrice = $(this).find('[data-cart-product-total-price]');
 
+      const productPriceResult = parseInt(productPrice.text()) * parseInt(productQnt.text());
 
+      productTotalPrice.html(productPriceResult);
 
-    // const productPrice = $('.cart-product [data-cart-product-price]');
-    // const productQnt = $('.cart-product .cart-product__counter-value');
-    // const productTotalPrice = $('.cart-product [data-cart-product-total-price]');
-    // const productPriceResult = parseInt(productPrice.text()) * parseInt(productQnt.text());
-    // productTotalPrice.html(productPriceResult);
+    })
 
   }
 
 
-  // function calcCartPrice() {
+  function calcCartPrice() {
+    const cartProducts = $('.cart-product');
+    let cartTotalPrice = 0;
+    const cartPriceEl = $('[data-total-cost]');
 
-  // let cartTotalPrice = 0;
+    cartProducts.each(function (item) {
 
-  // const dataTotalCost = $('[data-total-cost]');
+      const productTotalPrice = $(this).find('[data-cart-product-total-price]');
 
-  // const productTotalPrice = $('.cart-product [data-cart-product-total-price]');
+      cartTotalPrice = parseInt(cartTotalPrice) + parseInt(productTotalPrice.text());
 
-  // console.log(productTotalPrice.text());
+    })
 
-  // $.each(productTotalPrice, function () {
+    cartPriceEl.html(cartTotalPrice);
 
-  //   cartTotalPrice = cartTotalPrice + ;
-
-  // })
-
-  // dataTotalCost.html(cartTotalPrice);
-
-  // }
-
-
-
-
+  }
 
 
 
@@ -289,27 +276,3 @@ $(function () {
 
 });
 
-
-
-// const allCartBtn = document.querySelectorAll('.add-to-cart');
-
-
-// console.log(allCartBtn);
-
-// allCartBtn.forEach((button, index) => {
-//   button.addEventListener('click', () => {
-//     console.log("forEach worked", index)
-
-//   });
-
-// });
-
-// const arr = [1, 2, 3];
-// const arr2 = [];
-// arr.forEach(el => {
-//   el = el * 2;
-//   arr2.push(el);
-
-// })
-
-// console.log(arr2);
