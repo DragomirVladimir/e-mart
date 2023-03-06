@@ -12,18 +12,30 @@
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
     border-radius: 3px;
     position: relative;
+
+    @media (max-width:576px) {
+      padding: 20px 10px 10px;
+    }
   }
 
   &__img {
     height: 180px;
     object-fit: contain;
     margin-bottom: 33px;
+
+    @media (max-width:576px) {
+      height: 120px;
+    }
   }
 
   &__buttons {
     display: flex;
     justify-content: center;
     gap: 16px;
+
+    @media (max-width:576px) {
+      gap: 6px;
+    }
   }
 
   &__btn {
@@ -45,6 +57,11 @@
 
     &:active {
       background-color: #264A51;
+    }
+
+    @media (max-width:576px) {
+      width: 32px;
+      height: 32px;
     }
   }
 
@@ -84,6 +101,11 @@
   position: absolute;
   top: 0;
   right: 0;
+
+  @media (max-width:576px) {
+    row-gap: 6px;
+    padding: 6px 6px;
+  }
 }
 
 .badge {
@@ -109,5 +131,10 @@
     margin-top: 14px;
     padding: 7px;
     border-radius: 2px 0px 0px 2px;
+
+    @media (max-width:576px) {
+      margin-right: -6px;
+    }
+
   }
 }

@@ -12,11 +12,19 @@
     align-items: center;
     padding: 28px 0;
     padding-left: 95px;
+
+    @media (max-width:1300px) {
+      padding-left: 40px;
+    }
   }
 
   &__item {
     display: flex;
     gap: 35px;
+
+    @media (max-width:769px) {
+      gap: 15px;
+    }
   }
 
   &__link {
@@ -27,6 +35,10 @@
     letter-spacing: -0.04em;
     text-transform: uppercase;
     color: #3E5860;
+
+    @media (max-width:769px) {
+      font-size: 0;
+    }
   }
 
   &__link-icon {
